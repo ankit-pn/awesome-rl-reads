@@ -22,11 +22,10 @@ If the model is random (untrained):
 
 Assume only 100 tokens out of 50,000 are "reasonable" in context. Then:
 
-\[
-P(\text{at least one good token in } 64 \text{ samples}) = 1 - \left(1 - \frac{100}{50{,}000}\right)^{64} \approx 1 - (0.998)^{64} \approx 12\%
-\]
+**Probability check**
+P(at least one good token in 64 samples) = 1 - (1 - 100/50{,}000)^{64} ≈ 1 - (0.998)^{64} ≈ 12%
 
-So 88\% of the time, all 64 samples are nonsense → all rewards ≈ 0 → no learning signal.
+So 88% of the time, all 64 samples are nonsense → all rewards ≈ 0 → no learning signal.
 
 After pretraining:
 
